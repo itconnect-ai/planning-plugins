@@ -1,0 +1,20 @@
+{
+  "name": "itconnect",
+  "interface": {
+    "displayName": "ITConnect Education"
+  },
+  "plugins": [
+    {
+      "name": "vibe",
+      "source": {
+        "source": "local",
+        "path": "./plugins/vibe"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

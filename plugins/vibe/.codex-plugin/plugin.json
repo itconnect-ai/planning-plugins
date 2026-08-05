@@ -1,0 +1,37 @@
+{
+  "name": "vibe",
+  "version": "1.1.1",
+  "description": "비개발자용 5단계 바이브코딩 교육 파이프라인",
+  "author": {
+    "name": "ITConnect (아이티커넥트)",
+    "url": "https://b-creator.com"
+  },
+  "homepage": "https://b-creator.com",
+  "repository": "https://github.com/itconnect-ai/itconnect-vibe-plugins",
+  "keywords": [
+    "education",
+    "vibe-coding",
+    "prd",
+    "frd",
+    "trd"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Vibe Pipeline",
+    "shortDescription": "비개발자를 위한 바이브코딩 교육 과정",
+    "longDescription": "아이디어를 PRD, 디자인 프롬프트, FRD, TRD, 개발 계획으로 구체화하고 STORY 단위로 구현합니다.",
+    "developerName": "ITConnect (아이티커넥트)",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://b-creator.com",
+    "defaultPrompt": [
+      "아이디어를 PRD로 구체화해 주세요.",
+      "다음 미완료 STORY를 구현해 주세요.",
+      "현재 프로젝트 진행 상황을 알려주세요."
+    ]
+  }
+}

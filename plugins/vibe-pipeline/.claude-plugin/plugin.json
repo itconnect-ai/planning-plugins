@@ -1,0 +1,9 @@
+{
+  "name": "vibe",
+  "description": "비개발자용 5단계 바이브코딩 파이프라인 — 아이디어에서 PRD, 디자인 프롬프트, FRD, TRD, 개발 계획까지 AI와의 대화로 완성하고 STORY 단위로 개발합니다.",
+  "version": "1.1.1",
+  "author": {
+    "name": "ITConnect (아이티커넥트)"
+  },
+  "homepage": "https://b-creator.com"
+}

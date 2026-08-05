@@ -1,0 +1,7 @@
+interface:
+  display_name: "5단계 개발계획 만들기"
+  short_description: "문서를 EPIC과 STORY 개발 계획으로 바꿉니다."
+  default_prompt: "$05-plan으로 EPIC과 STORY 개발 계획을 만들어 주세요."
+
+policy:
+  allow_implicit_invocation: false

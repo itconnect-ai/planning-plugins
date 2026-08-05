@@ -1,0 +1,7 @@
+interface:
+  display_name: "다음 STORY 개발하기"
+  short_description: "다음 미완료 STORY 한 개를 구현하고 검증합니다."
+  default_prompt: "$build로 다음 미완료 STORY 한 개를 구현해 주세요."
+
+policy:
+  allow_implicit_invocation: false

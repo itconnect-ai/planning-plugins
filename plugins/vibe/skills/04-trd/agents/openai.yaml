@@ -1,0 +1,7 @@
+interface:
+  display_name: "4단계 기술설계서 만들기"
+  short_description: "기술 스택과 시스템 구조를 결정해 TRD를 만듭니다."
+  default_prompt: "$04-trd로 기술 스택과 시스템 구조를 결정해 주세요."
+
+policy:
+  allow_implicit_invocation: false
