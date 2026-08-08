@@ -18,7 +18,7 @@ Antigravity 안에 Claude Code 확장프로그램이 설치돼 있다면 PowerSh
 1. Antigravity에서 **Claude Code 패널**을 엽니다.
 2. Claude Code 입력창에 `/plugins`를 입력해 **Manage plugins** 화면을 엽니다.
 3. 상단의 **Marketplaces** 탭을 선택합니다.
-4. 마켓플레이스 입력란에 `itconnect-ai/itconnect-vibe-plugins`를 붙여넣고 추가합니다.
+4. 마켓플레이스 입력란에 `itconnect-ai/planning-plugins`를 붙여넣고 추가합니다.
 5. **Plugins** 탭으로 돌아가 `vibe`를 검색합니다.
 6. `vibe`의 **Install**을 누릅니다.
 7. 설치 범위는 모든 프로젝트에서 사용할 수 있는 **Install for you**를 권장합니다.
@@ -38,10 +38,10 @@ Antigravity IDE는 [VS Code 코드베이스 기반 편집기](https://antigravit
 
 현재 `vibe`는 공개 Plugins Directory 등록본이 아니라 GitHub 저장소 마켓플레이스입니다. 따라서 GitHub 저장소를 로컬 프로젝트로 연 뒤 ChatGPT 데스크톱의 Plugins 화면에서 설치합니다.
 
-1. [플러그인 GitHub 저장소](https://github.com/itconnect-ai/itconnect-vibe-plugins)에서 **Code → Open with GitHub Desktop**을 선택합니다.
+1. [플러그인 GitHub 저장소](https://github.com/itconnect-ai/planning-plugins)에서 **Code → Open with GitHub Desktop**을 선택합니다.
 2. GitHub Desktop에서 원하는 폴더를 선택해 저장소를 복제합니다.
 3. ChatGPT 데스크톱 앱을 열고 **Codex**를 선택합니다.
-4. 프로젝트 열기에서 복제한 `itconnect-vibe-plugins` 최상위 폴더를 선택합니다. `plugins/vibe` 하위 폴더가 아니라 저장소 전체를 열어야 합니다.
+4. 프로젝트 열기에서 복제한 `planning-plugins` 최상위 폴더를 선택합니다. `plugins/vibe` 하위 폴더가 아니라 저장소 전체를 열어야 합니다.
 5. ChatGPT 데스크톱 앱을 한 번 재시작합니다.
 6. **Plugins**를 열고 마켓플레이스 목록에서 **ITConnect Education**을 선택합니다.
 7. **Vibe Pipeline**을 열어 `+` 버튼으로 설치합니다.
@@ -62,14 +62,14 @@ $vibe:01-prd 만들고 싶은 서비스 아이디어
 ### Claude Code
 
 ```bash
-claude plugin marketplace add itconnect-ai/itconnect-vibe-plugins
+claude plugin marketplace add itconnect-ai/planning-plugins
 claude plugin install vibe@itconnect
 ```
 
 Claude Code CLI 안에서는 다음 명령을 사용할 수 있습니다.
 
 ```text
-/plugin marketplace add itconnect-ai/itconnect-vibe-plugins
+/plugin marketplace add itconnect-ai/planning-plugins
 /plugin install vibe@itconnect
 ```
 
@@ -81,7 +81,7 @@ Claude Code CLI 안에서는 다음 명령을 사용할 수 있습니다.
     "itconnect": {
       "source": {
         "source": "github",
-        "repo": "itconnect-ai/itconnect-vibe-plugins"
+        "repo": "itconnect-ai/planning-plugins"
       }
     }
   },
@@ -96,7 +96,7 @@ Claude Code CLI 안에서는 다음 명령을 사용할 수 있습니다.
 Codex CLI 또는 Codex 데스크톱 앱의 터미널에서 실행합니다.
 
 ```bash
-codex plugin marketplace add itconnect-ai/itconnect-vibe-plugins --ref main
+codex plugin marketplace add itconnect-ai/planning-plugins --ref main
 codex plugin add vibe@itconnect
 ```
 
