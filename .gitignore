@@ -1,0 +1,10 @@
+# Local agent and editor state
+.serena/
+
+# Generated production and validation workspaces
+output/
+work/
+
+# Runtime caches
+__pycache__/
+*.pyc
