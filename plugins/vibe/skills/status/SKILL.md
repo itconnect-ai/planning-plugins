@@ -8,8 +8,9 @@ description: PRD부터 STORY 개발까지 바이브코딩 파이프라인의 현
 다음 항목만 확인한다.
 
 1. `docs/prd.md`, `docs/design-prompt.md`, `docs/frd.md`, `docs/trd.md`, `docs/plan.md` 존재 여부 (docs/setup.md는 1단계가 만드는 시작 설정 파일이므로 단계 판단에서 제외)
-2. `design/` 폴더의 이미지 존재 여부
-3. `docs/plan.md`가 있으면 `- [ ]`와 `- [x]` STORY 줄
+2. prd.md·frd.md·trd.md 첫머리의 `상태:` 줄 — "상태: 작성 중"이면 그 단계는 완료로 치지 않고 해당 스킬 재실행을 안내한다.
+3. `design/` 폴더의 이미지 존재 여부
+4. `docs/plan.md`가 있으면 `- [ ]`와 `- [x]` STORY 줄
 
 관련 없는 파일은 열지 않는다.
 
