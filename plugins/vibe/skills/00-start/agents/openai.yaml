@@ -1,7 +1,0 @@
-interface:
-  display_name: "0단계 시작하기"
-  short_description: "과정 안내와 함께 아이디어와 진행 모드를 정합니다."
-  default_prompt: "$00-start로 바이브코딩 과정을 시작해 주세요."
-
-policy:
-  allow_implicit_invocation: false
