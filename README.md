@@ -7,7 +7,7 @@
 | Claude Code | `plugins/vibe-pipeline` | `/vibe:01-prd` |
 | Codex CLI·데스크톱 앱 | `plugins/vibe` | `$vibe:01-prd` |
 
-두 플러그인은 PRD → 디자인 프롬프트 → FRD → TRD → 개발 계획 → STORY 개발 순서를 동일하게 따릅니다.
+두 플러그인은 시작 설정 → PRD → 디자인 프롬프트 → FRD → TRD → 개발 계획 → STORY 개발 순서를 동일하게 따릅니다.
 
 ## Claude Code 설치
 
@@ -62,6 +62,7 @@ Codex CLI에서 `/plugins`를 입력하면 설치·활성화 상태를 확인할
 
 | 순서 | Claude Code | Codex | 하는 일 | 산출물 |
 |---|---|---|---|---|
+| 0 | `/vibe:00-start` | `$vibe:00-start` | 과정 안내, 아이디어 확인, 대화 방식(간단/꼼꼼) 설정 | `docs/setup.md` |
 | 1 | `/vibe:01-prd` | `$vibe:01-prd` | 아이디어 구체화와 PRD 작성 | `docs/prd.md` |
 | 2 | `/vibe:02-design` | `$vibe:02-design` | 디자인 시안 생성용 프롬프트 작성 | `docs/design-prompt.md` |
 | 3 | `/vibe:03-frd` | `$vibe:03-frd` | 시안 대조, 기능 분해와 정책 결정 | `docs/frd.md` |
@@ -71,6 +72,8 @@ Codex CLI에서 `/plugins`를 입력하면 설치·활성화 상태를 확인할
 | 수시 | `/vibe:status` | `$vibe:status` | 현재 진행 상황 확인 | 화면 안내 |
 
 2단계에서 만든 프롬프트는 Claude Design 또는 Google Stitch에 붙여넣고, 완성된 시안 이미지는 `design/01-home.png` 형식으로 저장합니다.
+
+0단계에서 AI와의 대화 방식을 고릅니다 — 간단 모드는 제품의 모습을 정하는 핵심 결정만 묻고 나머지는 추천으로 채우며, 꼼꼼 모드는 결정을 하나씩 배우며 진행합니다. 어느 모드든 만들어지는 범위와 결과물은 같습니다. 완료 기준은 로컬 실행(localhost)이며, 배포는 계획의 마지막 "배포(선택)" EPIC으로 분리되어 강의에서 강사와 함께 진행할 수 있습니다.
 
 ## 운영자 가이드
 

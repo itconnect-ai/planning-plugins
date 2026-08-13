@@ -7,7 +7,7 @@ description: PRD부터 STORY 개발까지 바이브코딩 파이프라인의 현
 
 다음 항목만 확인한다.
 
-1. `docs/prd.md`, `docs/design-prompt.md`, `docs/frd.md`, `docs/trd.md`, `docs/plan.md` 존재 여부
+1. `docs/setup.md`, `docs/prd.md`, `docs/design-prompt.md`, `docs/frd.md`, `docs/trd.md`, `docs/plan.md` 존재 여부 (setup.md는 0단계 설정 파일이며 단계 산출물이 아니다)
 2. `design/` 폴더의 이미지 존재 여부
 3. `docs/plan.md`가 있으면 `- [ ]`와 `- [x]` STORY 줄
 
@@ -17,7 +17,7 @@ description: PRD부터 STORY 개발까지 바이브코딩 파이프라인의 현
 
 확인한 정보만으로 5줄 이내로 답한다.
 
-1. `1 PRD → 2 시안 → 3 FRD → 4 TRD → 5 계획 → 개발` 중 어디까지 완료됐는지 알려준다.
+1. `0 시작 → 1 PRD → 2 시안 → 3 FRD → 4 TRD → 5 계획 → 개발` 중 어디까지 완료됐는지 알려준다.
 2. 개발 단계라면 완료 STORY 수 / 전체 STORY 수와 다음 미완료 STORY 이름을 알려준다.
 3. 지금 입력해야 할 스킬을 하나만 알려준다. 예: `$vibe:03-frd`
 
