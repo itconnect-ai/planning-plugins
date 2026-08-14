@@ -70,7 +70,7 @@ Codex CLI에서 `/plugins`를 입력하면 설치·활성화 상태를 확인할
 | 반복 | `/vibe:build` | `$vibe:build` | 다음 STORY 한 개 구현과 확인 | 코드와 `docs/plan.md` |
 | 수시 | `/vibe:status` | `$vibe:status` | 현재 진행 상황 확인 | 화면 안내 |
 
-2단계에서 만든 프롬프트는 Claude Design 또는 Google Stitch에 붙여넣고, 완성된 시안 이미지는 `design/01-home.png` 형식으로 저장합니다.
+2단계에서 만든 프롬프트는 Claude Design 또는 Google Stitch에 붙여넣고, 완성된 시안 이미지는 `design/01-home.png` 형식으로 저장합니다. 시안 이미지는 권장이지만 선택 산출물입니다 — 2단계 완료 기준은 `docs/design-prompt.md` 완료이며, 이미지가 없어도 3단계 진행이 가능합니다.
 
 1단계 첫 실행 시 AI와의 대화 방식을 고릅니다 — 간단 모드는 제품의 모습을 정하는 핵심 결정만 묻고 나머지는 추천으로 채우며, 꼼꼼 모드는 결정을 하나씩 배우며 진행합니다. 어느 모드든 만들어지는 범위와 결과물은 같습니다. 완료 기준은 로컬 실행(localhost)이며, 배포는 계획의 마지막 "배포(선택)" EPIC으로 분리되어 강의에서 강사와 함께 진행할 수 있습니다.
 
