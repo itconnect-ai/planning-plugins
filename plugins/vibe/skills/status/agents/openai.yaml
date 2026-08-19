@@ -1,5 +1,5 @@
 interface:
-  display_name: "진행 상황 확인하기"
+  display_name: "$vibe:status · 진행 상황 확인하기"
   short_description: "완료 단계와 다음 실행 스킬을 간단히 알려줍니다."
   default_prompt: "$status로 현재 진행 상황과 다음 단계를 알려 주세요."
 

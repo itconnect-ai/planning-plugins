@@ -1,5 +1,5 @@
 interface:
-  display_name: "3단계 기능정의서 만들기"
+  display_name: "$vibe:03-frd · 3단계 기능정의서 만들기"
   short_description: "기능을 분해하고 정책을 정해 FRD를 만듭니다."
   default_prompt: "$03-frd로 기능을 분해하고 기능정의서를 만들어 주세요."
 

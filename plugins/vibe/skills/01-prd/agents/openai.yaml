@@ -1,5 +1,5 @@
 interface:
-  display_name: "1단계 PRD 만들기"
+  display_name: "$vibe:01-prd · 1단계 PRD 만들기"
   short_description: "아이디어를 구체화해 제품 요구사항 문서를 만듭니다."
   default_prompt: "$01-prd로 서비스 아이디어를 PRD로 구체화해 주세요."
 
