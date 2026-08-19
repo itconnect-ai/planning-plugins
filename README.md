@@ -9,7 +9,57 @@
 
 두 플러그인은 PRD → 디자인 기준과 시안 → FRD → TRD → 개발 계획 → STORY 개발 순서를 동일하게 따릅니다.
 
-## Claude Code 설치
+## 가장 쉬운 설치 방법 — 터미널 명령어 없이
+
+### A. Antigravity의 Claude Code 확장프로그램에서 설치
+
+Antigravity 안에 Claude Code 확장프로그램이 설치돼 있다면 PowerShell을 열지 않고 확장 화면에서 설치할 수 있습니다.
+
+1. Antigravity에서 **Claude Code 패널**을 엽니다.
+2. Claude Code 입력창에 `/plugins`를 입력해 **Manage plugins** 화면을 엽니다.
+3. 상단의 **Marketplaces** 탭을 선택합니다.
+4. 마켓플레이스 입력란에 `itconnect-ai/planning-plugins`를 붙여넣고 추가합니다.
+5. **Plugins** 탭으로 돌아가 `vibe`를 검색합니다.
+6. `vibe`의 **Install**을 누릅니다.
+7. 설치 범위는 모든 프로젝트에서 사용할 수 있는 **Install for you**를 권장합니다.
+8. 재시작 안내 배너가 나타나면 Claude Code를 재시작하고 새 대화를 엽니다.
+
+설치 후 다음처럼 시작합니다.
+
+```text
+/vibe:01-prd 만들고 싶은 서비스 아이디어
+```
+
+Antigravity IDE는 [VS Code 코드베이스 기반 편집기](https://antigravity.google/docs/editor)이므로 설치된 Claude Code 확장이 최신 플러그인 관리 화면을 제공할 때 위 절차를 사용할 수 있습니다. `/plugins`가 그래픽 화면을 열지 않으면 확장프로그램을 업데이트한 뒤 다시 시도하고, 계속 지원되지 않으면 아래의 명령어 설치 방법을 사용합니다.
+
+[Claude Code 확장프로그램의 플러그인 관리 공식 안내](https://code.claude.com/docs/en/vs-code#manage-plugins)
+
+### B. ChatGPT 데스크톱 앱에서 Codex용 플러그인 설치
+
+현재 `vibe`는 공개 Plugins Directory 등록본이 아니라 GitHub 저장소 마켓플레이스입니다. 따라서 GitHub 저장소를 로컬 프로젝트로 연 뒤 ChatGPT 데스크톱의 Plugins 화면에서 설치합니다.
+
+1. [플러그인 GitHub 저장소](https://github.com/itconnect-ai/planning-plugins)에서 **Code → Open with GitHub Desktop**을 선택합니다.
+2. GitHub Desktop에서 원하는 폴더를 선택해 저장소를 복제합니다.
+3. ChatGPT 데스크톱 앱을 열고 **Codex**를 선택합니다.
+4. 프로젝트 열기에서 복제한 `planning-plugins` 최상위 폴더를 선택합니다. `plugins/vibe` 하위 폴더가 아니라 저장소 전체를 열어야 합니다.
+5. ChatGPT 데스크톱 앱을 한 번 재시작합니다.
+6. **Plugins**를 열고 마켓플레이스 목록에서 **ITConnect Education**을 선택합니다.
+7. **Vibe Pipeline**을 열어 `+` 버튼으로 설치합니다.
+8. 새 Codex 작업을 엽니다.
+
+설치 후 다음처럼 시작합니다.
+
+```text
+$vibe:01-prd 만들고 싶은 서비스 아이디어
+```
+
+**ITConnect Education**이 보이지 않으면 복제한 저장소의 최상위 폴더를 프로젝트로 열었는지 확인한 뒤 앱을 재시작합니다. ChatGPT 데스크톱은 저장소 루트의 `.agents/plugins/marketplace.json`을 읽어 로컬 마켓플레이스를 표시합니다.
+
+[ChatGPT·Codex 플러그인 사용 공식 안내](https://learn.chatgpt.com/docs/plugins) · [저장소 마켓플레이스 공식 안내](https://developers.openai.com/plugins/build/plugins#build-your-own-curated-plugin-list)
+
+## 명령어로 설치하기 — 대안
+
+### Claude Code
 
 ```bash
 claude plugin marketplace add itconnect-ai/planning-plugins
@@ -43,7 +93,7 @@ Claude Code CLI 안에서는 다음 명령을 사용할 수 있습니다.
 }
 ```
 
-## Codex 설치 (일반 사용자·최초 1회)
+### Codex
 
 일반 사용자는 이 저장소를 `git clone`하거나 `git pull`할 필요가 없고, 로컬 폴더 경로도 입력하지 않습니다. PowerShell 또는 터미널에서 아래 명령을 최초 한 번만 실행합니다.
 
