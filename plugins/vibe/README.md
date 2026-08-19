@@ -1,6 +1,6 @@
 # Vibe Pipeline for Codex
 
-비개발자가 아이디어에서 시작해 PRD, 디자인 프롬프트, FRD, TRD, 개발 계획을 만들고 STORY 단위로 개발하는 Codex 교육 플러그인입니다.
+비개발자가 아이디어에서 시작해 PRD, 디자인 기준과 시안, FRD, TRD, 개발 계획을 만들고 STORY 단위로 개발하는 Codex 교육 플러그인입니다.
 
 ## 최초 설치
 
@@ -27,7 +27,7 @@ codex plugin add vibe@itconnect
 | 순서 | 스킬 | 산출물 |
 |---|---|---|
 | 1 | `$vibe:01-prd` | `docs/prd.md`, `docs/setup.md` (첫 실행 시 대화 방식 설정) |
-| 2 | `$vibe:02-design` | `docs/design-prompt.md` |
+| 2 | `$vibe:02-design` | `docs/design-prompt.md`, 화면 시안(선택) |
 | 3 | `$vibe:03-frd` | `docs/frd.md` |
 | 4 | `$vibe:04-trd` | `docs/trd.md` |
 | 5 | `$vibe:05-plan` | `docs/plan.md` |
@@ -42,3 +42,5 @@ $vibe:01-prd 만들고 싶은 서비스 아이디어
 ```
 
 1단계 첫 실행 시 AI와의 대화 방식을 고릅니다 — 간단 모드는 핵심 결정만 묻고 나머지는 추천으로 채우며, 꼼꼼 모드는 결정을 하나씩 배우며 진행합니다. 완료 기준은 로컬 실행이며, 배포는 계획의 마지막 "배포(선택)" EPIC으로 분리됩니다.
+
+2단계는 사용 가능한 도구가 있으면 AI가 화면 시안을 직접 만들거나 기존 HTML·이미지를 확인합니다. 도구가 없으면 `docs/design-prompt.md`를 Claude Design 또는 Google Stitch에서 사용하도록 안내합니다. 새로운 화면·기능·정책은 사용자 승인 없이 추가하지 않으며, 시안 이미지는 선택 산출물입니다.
