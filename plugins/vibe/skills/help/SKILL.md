@@ -21,7 +21,7 @@ description: 바이브코딩 과정의 명령 목록과 진행 순서를 안내�
 | 순서 | 스킬 | 하는 일 | 산출물 |
 |---|---|---|---|
 | 1 | `$vibe:01-prd` | 아이디어를 구체화해 무엇을 왜 만들지 정한다 (첫 실행 시 대화 방식도 함께 선택) | `docs/prd.md` |
-| 2 | `$vibe:02-design` | 화면 시안을 만들 프롬프트를 작성한다 (시안 이미지는 선택) | `docs/design-prompt.md` |
+| 2 | `$vibe:02-design` | 디자인 기준을 정하고, 가능한 환경에서는 화면 시안까지 만든다 (시안 이미지는 선택) | `docs/design-prompt.md` |
 | 3 | `$vibe:03-frd` | 기능을 실제 개발 단위로 쪼개고 정책을 정한다 | `docs/frd.md` |
 | 4 | `$vibe:04-trd` | 어떤 기술로 어떻게 만들지 정한다 | `docs/trd.md` |
 | 5 | `$vibe:05-plan` | 개발 순서를 EPIC/STORY로 짠다 | `docs/plan.md` |

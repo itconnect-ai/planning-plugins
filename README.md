@@ -7,7 +7,7 @@
 | Claude Code | `plugins/vibe-pipeline` | `/vibe:01-prd` |
 | Codex CLI·데스크톱 앱 | `plugins/vibe` | `$vibe:01-prd` |
 
-두 플러그인은 PRD → 디자인 프롬프트 → FRD → TRD → 개발 계획 → STORY 개발 순서를 동일하게 따릅니다.
+두 플러그인은 PRD → 디자인 기준과 시안 → FRD → TRD → 개발 계획 → STORY 개발 순서를 동일하게 따릅니다.
 
 ## Claude Code 설치
 
@@ -122,7 +122,7 @@ Codex에서는 `/plugins`로 설치·활성화 상태를 확인하고, 스킬이
 | 순서 | Claude Code | Codex | 하는 일 | 산출물 |
 |---|---|---|---|---|
 | 1 | `/vibe:01-prd` | `$vibe:01-prd` | 아이디어 구체화와 PRD 작성 (첫 실행 시 대화 방식 설정 포함) | `docs/prd.md`, `docs/setup.md` |
-| 2 | `/vibe:02-design` | `$vibe:02-design` | 디자인 시안 생성용 프롬프트 작성 | `docs/design-prompt.md` |
+| 2 | `/vibe:02-design` | `$vibe:02-design` | 디자인 기준 작성과 가능한 경우 시안 제작·검토 | `docs/design-prompt.md`, 화면 시안(선택) |
 | 3 | `/vibe:03-frd` | `$vibe:03-frd` | 시안 대조, 기능 분해와 정책 결정 | `docs/frd.md` |
 | 4 | `/vibe:04-trd` | `$vibe:04-trd` | 기술 스택과 구조 결정 | `docs/trd.md` |
 | 5 | `/vibe:05-plan` | `$vibe:05-plan` | EPIC/STORY 개발 계획 수립 | `docs/plan.md` |
@@ -130,7 +130,7 @@ Codex에서는 `/plugins`로 설치·활성화 상태를 확인하고, 스킬이
 | 수시 | `/vibe:status` | `$vibe:status` | 현재 진행 상황 확인 | 화면 안내 |
 | 도움말 | `/vibe:help` | `$vibe:help` | 명령 목록과 진행 순서 안내 | 화면 안내 |
 
-2단계에서 만든 프롬프트는 Claude Design 또는 Google Stitch에 붙여넣고, 완성된 시안 이미지는 `design/01-home.png` 형식으로 저장합니다. 시안 이미지는 권장이지만 선택 산출물입니다 — 2단계 완료 기준은 `docs/design-prompt.md` 완료이며, 이미지가 없어도 3단계 진행이 가능합니다.
+2단계는 사용 가능한 도구가 있으면 AI가 화면 시안을 직접 만들거나 기존 HTML·이미지를 확인합니다. 도구가 없으면 `docs/design-prompt.md`를 Claude Design 또는 Google Stitch에서 사용하도록 안내합니다. 새로운 화면·기능·정책은 사용자 승인 없이 추가하지 않으며, 시안 이미지는 권장이지만 선택 산출물입니다 — 이미지가 없어도 3단계 진행이 가능합니다.
 
 1단계 첫 실행 시 AI와의 대화 방식을 고릅니다 — 간단 모드는 제품의 모습을 정하는 핵심 결정만 묻고 나머지는 추천으로 채우며, 꼼꼼 모드는 결정을 하나씩 배우며 진행합니다. 어느 모드든 만들어지는 범위와 결과물은 같습니다. 완료 기준은 로컬 실행(localhost)이며, 배포는 계획의 마지막 "배포(선택)" EPIC으로 분리되어 강의에서 강사와 함께 진행할 수 있습니다.
 

@@ -1,7 +1,7 @@
 interface:
-  display_name: "$vibe:02-design · 2단계 디자인 프롬프트"
-  short_description: "PRD를 화면 시안 제작용 프롬프트로 바꿉니다."
-  default_prompt: "$02-design으로 PRD의 디자인 시안 프롬프트를 만들어 주세요."
+  display_name: "$vibe:02-design · 2단계 디자인"
+  short_description: "PRD를 디자인 기준과 화면 시안으로 구체화합니다."
+  default_prompt: "$02-design으로 PRD의 디자인 기준을 정하고 가능한 경우 화면 시안까지 만들어 주세요."
 
 policy:
   allow_implicit_invocation: false
