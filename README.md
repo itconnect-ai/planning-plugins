@@ -9,7 +9,31 @@
 
 두 플러그인은 PRD → 디자인 기준과 시안 → FRD → TRD → 개발 계획 → STORY 개발 순서를 동일하게 따릅니다.
 
-## 가장 쉬운 설치 방법 — 터미널 명령어 없이
+## 무엇을 하는 과정인가
+
+코딩을 해본 적 없는 사람이 **아이디어를 대화로 구체화해 설계도(기획 문서)를 먼저 만들고, 그 문서대로 AI가 개발하게** 하는 과정입니다. AI에게 바로 "만들어줘"라고 하지 않기 때문에 만들고 싶었던 것과 실제 결과물이 어긋나지 않습니다.
+
+명령을 순서대로 입력하면 이런 것들이 남습니다.
+
+- **기획 문서 5종** — 무엇을 왜 만드는지(PRD), 디자인 기준, 기능 명세(FRD), 기술 설계(TRD), 개발 계획
+- **화면 시안** — 사용 가능한 도구가 있으면 AI가 직접 제작 (선택 산출물)
+- **EPIC/STORY 목록** — 눈으로 확인 가능한 작업 단위로 쪼갠 개발 계획
+- **동작하는 서비스** — 내 컴퓨터에서 실행되는 결과물 (배포는 선택)
+
+모든 결정은 A/B/C/D 선택형으로 나오고 선택지마다 "고르면 결과가 어떻게 달라지는지"가 붙습니다. 선택지를 읽는 것만으로 개념을 익히게 됩니다.
+
+## 설치 — 내 환경 고르기
+
+아래에서 자신의 환경 한 줄만 찾아가면 됩니다.
+
+| 사용 환경 | 설치 방법 |
+|---|---|
+| 터미널에서 `claude` 실행 (가장 일반적) | [명령어로 설치 — Claude Code](#claude-code) |
+| Antigravity의 Claude Code 확장프로그램 | [A. 확장프로그램에서 설치](#a-antigravity의-claude-code-확장프로그램에서-설치) |
+| ChatGPT 데스크톱 앱 (Codex) | [B. ChatGPT 데스크톱 앱에서 설치](#b-chatgpt-데스크톱-앱에서-codex용-플러그인-설치) |
+| 터미널에서 `codex` 실행 | [명령어로 설치 — Codex](#codex) |
+
+## 그래픽 화면에서 설치 — 터미널 명령어 없이
 
 ### A. Antigravity의 Claude Code 확장프로그램에서 설치
 
@@ -57,7 +81,7 @@ $vibe:01-prd 만들고 싶은 서비스 아이디어
 
 [ChatGPT·Codex 플러그인 사용 공식 안내](https://learn.chatgpt.com/docs/plugins) · [저장소 마켓플레이스 공식 안내](https://developers.openai.com/plugins/build/plugins#build-your-own-curated-plugin-list)
 
-## 명령어로 설치하기 — 대안
+## 명령어로 설치하기
 
 ### Claude Code
 
@@ -74,24 +98,6 @@ Claude Code CLI 안에서는 다음 명령을 사용할 수 있습니다.
 ```
 
 > **설치 후 Claude Code를 완전히 껐다 다시 켜야 합니다.** 재시작 전에는 `/vibe:...` 명령이 목록에 나타나지 않습니다. 설치를 AI에게 대신 시킨 경우에도 재시작은 직접 해야 합니다. 재시작 후 `/vibe:help`를 입력하면 명령 목록과 진행 순서를 볼 수 있습니다.
-
-수강생용 시작 템플릿의 `.claude/settings.json`에 다음 설정을 넣으면 설치를 제안할 수 있습니다.
-
-```json
-{
-  "extraKnownMarketplaces": {
-    "itconnect": {
-      "source": {
-        "source": "github",
-        "repo": "itconnect-ai/planning-plugins"
-      }
-    }
-  },
-  "enabledPlugins": {
-    "vibe@itconnect": true
-  }
-}
-```
 
 ### Codex
 
@@ -136,7 +142,7 @@ codex plugin marketplace upgrade itconnect
 codex plugin add vibe@itconnect
 ```
 
-업데이트 후에는 **Claude Code를 재시작**하거나 **새 Codex 작업을 열어야** 적용됩니다. 일반 사용자는 저장소를 직접 `git clone`하거나 `git pull`할 필요가 없습니다 — 위 명령이 대신 처리합니다.
+업데이트 후에는 **Claude Code를 재시작**하거나 **새 Codex 작업을 열어야** 적용됩니다.
 
 ### 기존 프로젝트에 미치는 영향
 
@@ -180,11 +186,35 @@ Codex에서는 `/plugins`로 설치·활성화 상태를 확인하고, 스킬이
 | 수시 | `/vibe:status` | `$vibe:status` | 현재 진행 상황 확인 | 화면 안내 |
 | 도움말 | `/vibe:help` | `$vibe:help` | 명령 목록과 진행 순서 안내 | 화면 안내 |
 
+무엇을 입력해야 할지 모르겠으면 **`/vibe:help`**(Codex는 `$vibe:help`)를 입력하세요. 명령 목록과 현재 위치, 다음에 할 일을 알려줍니다.
+
 2단계는 사용 가능한 도구가 있으면 AI가 화면 시안을 직접 만들거나 기존 HTML·이미지를 확인합니다. 도구가 없으면 `docs/design-prompt.md`를 Claude Design 또는 Google Stitch에서 사용하도록 안내합니다. 새로운 화면·기능·정책은 사용자 승인 없이 추가하지 않으며, 시안 이미지는 권장이지만 선택 산출물입니다 — 이미지가 없어도 3단계 진행이 가능합니다.
 
-1단계 첫 실행 시 AI와의 대화 방식을 고릅니다 — 간단 모드는 제품의 모습을 정하는 핵심 결정만 묻고 나머지는 추천으로 채우며, 꼼꼼 모드는 결정을 하나씩 배우며 진행합니다. 어느 모드든 만들어지는 범위와 결과물은 같습니다. 완료 기준은 로컬 실행(localhost)이며, 배포는 계획의 마지막 "배포(선택)" EPIC으로 분리되어 강의에서 강사와 함께 진행할 수 있습니다.
+1단계 첫 실행 시 AI와의 대화 방식을 고릅니다. 꼼꼼 모드는 라운드 수를 고정하지 않고 AI가 누락·모호·충돌 항목을 찾아 필요한 만큼 보완하며, 간단 모드는 기본 2라운드로 핵심 결정만 묻고 나머지는 추천·추정으로 채워 일괄 확인합니다. 어느 모드든 만들어지는 범위와 결과물은 같습니다. 완료 기준은 로컬 실행(localhost)이며, 배포는 계획의 마지막 "배포(선택)" EPIC으로 분리되어 강의에서 강사와 함께 진행할 수 있습니다.
 
 ## 운영자 가이드
+
+플러그인을 수정·배포하기 전에 [CONTRIBUTING.md](CONTRIBUTING.md)를 먼저 읽으세요. 두 플러그인 동기화 규칙, 다른 스킬이 파싱하므로 바꾸면 안 되는 형식(산출물 경로·체크박스·기능 ID·문서 상태 줄), 공통 정책, 릴리스 절차가 정리돼 있습니다. 수업 시간 배분과 운영 팁은 [강사용 안내](plugins/vibe-pipeline/README.md)에 있습니다.
+
+### 수강생용 시작 템플릿
+
+수강생에게 나눠줄 템플릿 폴더의 `.claude/settings.json`에 아래 설정을 넣어두면, 학습자가 그 폴더를 열었을 때 설치가 자동으로 제안됩니다. 설치 명령을 직접 입력하지 않아도 되므로 수업 초반 마찰이 가장 적습니다.
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "itconnect": {
+      "source": {
+        "source": "github",
+        "repo": "itconnect-ai/planning-plugins"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "vibe@itconnect": true
+  }
+}
+```
 
 ### Claude Code 검증과 업데이트
 
@@ -220,16 +250,32 @@ codex plugin add vibe@itconnect
 codex plugin add vibe@itconnect
 ```
 
+### 버전 태그와 원복
+
+릴리스마다 태그를 남깁니다. 문제가 생기면 특정 버전의 내용을 확인하거나 되돌릴 수 있습니다.
+
+```bash
+git tag -n1                                              # 버전 목록과 요약 보기
+git show v1.3.0:plugins/vibe-pipeline/skills/build/SKILL.md   # 그 버전의 파일 내용 확인
+git checkout v1.3.0 -- plugins/vibe-pipeline/skills/build/SKILL.md  # 파일 하나만 되돌리기
+```
+
+학습자 쪽에도 안전망이 있습니다 — 플러그인 캐시가 버전별 폴더로 쌓이므로 구버전이 남아 있습니다.
+
 ## 저장소 구조
 
 ```text
 .claude-plugin/marketplace.json       # Claude Code 마켓플레이스
 .agents/plugins/marketplace.json      # Codex 마켓플레이스
+CONTRIBUTING.md                       # 운영자용 유지보수 규칙
 plugins/
-├── vibe-pipeline/                     # Claude Code용 플러그인
+├── vibe-pipeline/                    # Claude Code용 플러그인 (/vibe:...)
 │   ├── .claude-plugin/plugin.json
-│   └── skills/
-└── vibe/                              # Codex용 플러그인
+│   ├── README.md                     # 강사용 수업 운영 안내
+│   └── skills/                       # 01-prd 02-design 03-frd 04-trd 05-plan build status help
+└── vibe/                             # Codex용 플러그인 ($vibe:...)
     ├── .codex-plugin/plugin.json
-    └── skills/
+    └── skills/                       # 같은 8개 (Codex 형식 + agents/openai.yaml)
 ```
+
+학습자 프로젝트에는 이 파일들이 복사되지 않습니다. 플러그인은 사용자 캐시에 설치되고, 프로젝트 폴더에는 `docs/`(기획 문서)와 `design/`(시안), 실제 코드만 생깁니다.
