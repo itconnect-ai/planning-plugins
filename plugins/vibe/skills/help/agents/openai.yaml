@@ -1,0 +1,7 @@
+interface:
+  display_name: "도움말"
+  short_description: "명령 목록과 진행 순서를 알려줍니다."
+  default_prompt: "$help로 사용법과 명령 목록을 알려주세요."
+
+policy:
+  allow_implicit_invocation: false

@@ -1,13 +1,13 @@
 {
   "name": "vibe",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "비개발자용 5단계 바이브코딩 교육 파이프라인",
   "author": {
     "name": "ITConnect (아이티커넥트)",
     "url": "https://b-creator.com"
   },
   "homepage": "https://b-creator.com",
-  "repository": "https://github.com/itconnect-ai/itconnect-vibe-plugins",
+  "repository": "https://github.com/itconnect-ai/planning-plugins",
   "keywords": [
     "education",
     "vibe-coding",

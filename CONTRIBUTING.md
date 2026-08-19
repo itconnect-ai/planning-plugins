@@ -43,8 +43,8 @@
 
 1. 수정 후 저장소 루트에서: `claude plugin validate . --strict`
 2. Codex 쪽은 CLI 검증 도구가 없으므로 Codex 환경에서 `$vibe:01-prd`를 실제 실행해 확인합니다.
-3. 릴리스: 두 plugin.json(`plugins/vibe-pipeline/.claude-plugin/plugin.json`, `plugins/vibe/.codex-plugin/plugin.json`)의 버전을 **같은 값으로 동시에** 올리고 커밋·푸시합니다.
-4. 학습자 업데이트: Claude Code는 마켓플레이스 업데이트 후 재설치, Codex는 `codex plugin marketplace upgrade itconnect` → `codex plugin add vibe@itconnect` → 새 작업 열기.
+3. 릴리스: 두 plugin.json(`plugins/vibe-pipeline/.claude-plugin/plugin.json`, `plugins/vibe/.codex-plugin/plugin.json`)의 버전을 **같은 값으로 동시에** 올리고 커밋·푸시합니다. **버전을 올리지 않으면 학습자 쪽에서 업데이트가 감지되지 않습니다** — 스킬 내용을 고쳤으면 반드시 올립니다.
+4. 학습자 업데이트: Claude Code는 `claude plugin marketplace update itconnect` → `claude plugin update vibe@itconnect` → 재시작. (`install`은 업데이트가 아닙니다 — 이미 설치된 경우 아무것도 바뀌지 않습니다.) Codex는 `codex plugin marketplace upgrade itconnect` → `codex plugin add vibe@itconnect` → 새 작업 열기.
 5. 강의 투입 전 파일럿: 빈 폴더에서 설치 → `01-prd`부터 `build` 2~3개까지 실제로 완주해 봅니다.
 
 ## 수정 시 체크리스트

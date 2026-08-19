@@ -16,6 +16,7 @@
 | 5 | `/vibe:05-plan` | EPIC/STORY 개발 계획 수립 | 1~2 | `docs/plan.md` |
 | 반복 | `/vibe:build` | 다음 STORY 1개 구현 + 확인 후 체크 | — | 코드 + plan.md 갱신 |
 | 수시 | `/vibe:status` | 진행 현황과 다음 명령 확인 | — | — |
+| 도움말 | `/vibe:help` | 명령 목록과 진행 순서 안내 (처음 시작할 때) | — | — |
 
 - 2단계 시안 제작은 플러그인 밖에서 합니다. Claude 유료 사용자는 Claude Design, 그 외에는 Google Stitch(stitch.withgoogle.com)에 `docs/design-prompt.md`의 블록을 붙여넣어 만든 뒤, 이미지를 `design/` 폴더에 저장합니다. 시안 이미지는 권장이지만 **선택 산출물**입니다 — 2단계 완료 기준은 `docs/design-prompt.md` 완료이며, 이미지가 없어도 3단계 진행이 가능합니다.
 - 다른 이름과 충돌이 없으면 접두어 없이 `/01-prd` 처럼 짧게 입력해도 동작합니다.
